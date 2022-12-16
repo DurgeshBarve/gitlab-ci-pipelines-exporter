@@ -104,4 +104,4 @@ require (
 	gopkg.in/DATA-DOG/go-sqlmock.v1 v1.3.0 // indirect
 )
 
-replace github.com/vmihailenco/taskq/v3 => github.com/mvisonneau/taskq/v3 v3.2.9-0.20220825072553-a973dd7a133a
+replace github.com/vmihailenco/taskq/v3 => github.com/DurgeshBarve/taskq/v3 v3.2.9-0.20220825072553-a973dd7a133a
