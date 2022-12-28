@@ -1,6 +1,6 @@
 NAME          := gitlab-ci-pipelines-exporter
 FILES         := $(shell git ls-files */*.go)
-REPOSITORY    := mvisonneau/$(NAME)
+REPOSITORY    := DurgeshBarve/$(NAME)
 .DEFAULT_GOAL := help
 
 .PHONY: setup
@@ -12,7 +12,7 @@ setup: ## Install required libraries/tools for build tasks
 .PHONY: fmt
 fmt: setup ## Format source code
 	gofumpt -w $(FILES)
-	gci write -s standard -s default -s "prefix(github.com/mvisonneau)" .
+	gci write -s standard -s default -s "prefix(github.com/DurgeshBarve)" .
 
 .PHONY: lint
 lint: setup ## Run all lint related tests upon the codebase
@@ -69,7 +69,7 @@ coverage-html: ## Generates coverage report and displays it in the browser
 .PHONY: dev-env
 dev-env: ## Build a local development environment using Docker
 	@docker run -it --rm \
-		-v $(shell pwd):/go/src/github.com/mvisonneau/$(NAME) \
+		-v $(shell pwd):/go/src/github.com/DurgeshBarve/$(NAME) \
 		-w /go/src/github.com/mvisonneau/$(NAME) \
 		-p 8080:8080 \
 		golang:1.19 \
